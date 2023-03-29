@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "338406486033",
+    "project_id": "gestion-de-torneos-f0c94",
+    "storage_bucket": "gestion-de-torneos-f0c94.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:338406486033:android:b5ca4224e7a65233c281b0",
+        "android_client_info": {
+          "package_name": "com.example.estadisticastorneo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "338406486033-hejrk0q66phmavrqmi10m6i618m0j83e.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.estadisticastorneo",
+            "certificate_hash": "759cd97136bc0dbf755a714308ac40d9a1dee7ee"
+          }
+        },
+        {
+          "client_id": "338406486033-fmjpq6u0j3u9luun33jqva0v8hto91fv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBTqyqxRHj0pDkrx_mQq_KDhuaMb-BDqWo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "338406486033-fmjpq6u0j3u9luun33jqva0v8hto91fv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
