@@ -1,6 +1,181 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center"
+    android:background="@drawable/round_back_green_button">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="15dp"
+            >
+            <TextView
+                android:id="@+id/textNameTeam1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tempest"
+                android:textStyle="bold"
+                android:paddingBottom="5dp"
+                android:textColor="@color/white"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+            <ImageView
+                android:id="@+id/imageTeam1"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_futbol"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textNameTeam1" />
+            <TextView
+                android:textStyle="bold"
+                android:text="name apellido"
+                android:textColor="@color/white"
+                android:id="@+id/txtTeamName1"
+                android:paddingTop="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="@+id/imageTeam1"
+                app:layout_constraintStart_toStartOf="@+id/imageTeam1"
+                app:layout_constraintTop_toBottomOf="@id/imageTeam1"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+<!--        <LinearLayout-->
+<!--            android:orientation="horizontal"-->
+<!--            android:gravity="center"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content">-->
+<!--            <RelativeLayout-->
+<!--                android:id="@+id/textViewScoreTeam1"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="match_parent">-->
+<!--                <TextView-->
+<!--                    android:layout_centerVertical="true"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="66"-->
+<!--                    android:textSize="30sp"/>-->
+<!--            </RelativeLayout>-->
+<!--        </LinearLayout>-->
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/viewScoreTeam2"
+            android:layout_width="120dp"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true">
+
+            <TextView
+                android:layout_marginTop="15dp"
+                android:id="@+id/textViewTime"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:textStyle="bold"
+                android:text="00:00:00"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imgViewLine"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_line_score"
+                app:layout_constraintBottom_toTopOf="@+id/textViewPosition"
+                app:layout_constraintEnd_toEndOf="@+id/textViewTime"
+                app:layout_constraintStart_toStartOf="@+id/textViewTime"
+                app:layout_constraintTop_toBottomOf="@+id/textViewTime" />
+
+            <TextView
+                android:layout_marginBottom="15dp"
+                android:id="@+id/textViewPosition"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:text="66 Tm"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/textViewScoreTm1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4"
+                android:textSize="30dp"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textViewScoreTm2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4"
+                android:textSize="30dp"
+                android:textColor="#0EF312"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="15dp">
+
+            <TextView
+                android:id="@+id/textNameTeam2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rimuru"
+                android:textStyle="bold"
+                android:paddingBottom="5dp"
+                android:textColor="@color/white"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+            <ImageView
+                android:id="@+id/imageTeam2"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_ping_pong"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textNameTeam2" />
+            <TextView
+                android:textStyle="bold"
+                android:text="name apellido"
+                android:textColor="@color/white"
+                android:id="@+id/txtTeamName2"
+                android:paddingTop="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="@+id/imageTeam2"
+                app:layout_constraintStart_toStartOf="@+id/imageTeam2"
+                app:layout_constraintTop_toBottomOf="@id/imageTeam2"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </RelativeLayout>
+
+
+</LinearLayout>

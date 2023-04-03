@@ -187,9 +187,9 @@ public class LoginActivity extends AppCompatActivity {
                 if (task.getResult().child("nombre").getValue()!= null){
                     updateUI(user);
                 }else{
-//                    Intent intent = new Intent(LoginActivity.this, DataCompleteActivity.class);
-//                    startActivity(intent);
-//                    finish();
+                    Intent intent = new Intent(LoginActivity.this, DataCompleteActivity.class);
+                    startActivity(intent);
+                    finish();
                 }
 
             }

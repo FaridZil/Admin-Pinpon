@@ -194,7 +194,7 @@ public class SigninActivity extends AppCompatActivity {
 
     private void addToDataBase(String userID){
         if(user!= null){
-            _databasereference.child("Drivers").child(userID).setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
+            _databasereference.child("Users").child(userID).setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
                 @Override
                 public void onComplete(@NonNull @NotNull Task<Void> task) {
                     if (task.isSuccessful()){

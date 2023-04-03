@@ -1,11 +1,13 @@
 package com.example.estadisticastorneo.welcome;
 
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 
 import com.example.estadisticastorneo.view.MainActivity;
 import com.example.estadisticastorneo.R;
@@ -20,7 +22,8 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 public class WelcomeActivity extends AppCompatActivity {
-    private SharedPreferences mPref,mPref2;
+    private SharedPreferences mPref,mPref2,mPreModeNight;
+    private boolean nightMode;
     private FirebaseAuth _firebaseauth;
     private DatabaseReference _databasereference;
 
@@ -30,6 +33,13 @@ public class WelcomeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_welcome);
         mPref = getApplicationContext().getSharedPreferences("carousel",MODE_PRIVATE);
         mPref2 = getApplicationContext().getSharedPreferences("locality",MODE_PRIVATE);
+        mPreModeNight = getApplicationContext().getSharedPreferences("MODE",MODE_PRIVATE);
+        nightMode = mPreModeNight.getBoolean("nightMode",false);
+        if(nightMode){
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+        }else{
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+        }
         _firebaseauth = FirebaseAuth.getInstance();
         _databasereference = FirebaseDatabase.getInstance().getReference();
         boolean view = mPref.getBoolean("carouselView",false);
@@ -51,7 +61,7 @@ public class WelcomeActivity extends AppCompatActivity {
                     finish();
                 }
             }
-        },2000);
+        },3000);
     }
     public void updateUI(FirebaseUser user){
         if(user!= null){
