@@ -31,6 +31,7 @@ public class Confrontation {
         textViewPosition = new ArrayList<>();
         textViewScoreTm1 = new ArrayList<>();
         textViewScoreTm2 = new ArrayList<>();
+        int x = 0;
     }
     public void changedItem(String key,String _imgViewTeam1, String _imgViewTeam2, String _textNameTeam1,
                             String _textNameTeam2, String _txtTeamName1, String _txtTeamName2,
