@@ -52,101 +52,106 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
-            android:layout_marginRight="10dp"
-            style="@style/CardBackgroundBlack">
+            android:layout_marginRight="10dp">
+
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/containerBtnPingIn">
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="0dp">
 
-                <View
-                    android:onClick="toPingViewTeams"
-                    android:id="@+id/teamPingIn"
-                    style="@style/buttonTeams"
-                    android:layout_width="100dp"
-                    android:layout_height="50dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:id="@+id/btnTeamPingIn"
-                    style="@style/TextColor"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                <Button
                     android:text="Ping Pong"
-                    app:layout_constraintBottom_toBottomOf="@+id/teamPingIn"
-                    app:layout_constraintEnd_toEndOf="@+id/teamPingIn"
-                    app:layout_constraintStart_toStartOf="@+id/teamPingIn"
-                    app:layout_constraintTop_toTopOf="@+id/teamPingIn"/>
-            </androidx.constraintlayout.widget.ConstraintLayout>
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/containerBtnBasketballIn"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_toEndOf="@+id/containerBtnPingIn">
-
-                <View
-                    android:onClick="toBasketBallViewTeams"
-                    android:id="@+id/teamBasketballIn"
-                    style="@style/buttonTeams"
-                    android:layout_width="100dp"
-                    android:layout_height="50dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:id="@+id/btnTeamBasketballIn"
-                    style="@style/TextColor"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/black"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="BasketBall"
-                    app:layout_constraintBottom_toBottomOf="@+id/teamBasketballIn"
-                    app:layout_constraintEnd_toEndOf="@+id/teamBasketballIn"
-                    app:layout_constraintStart_toStartOf="@+id/teamBasketballIn"
-                    app:layout_constraintTop_toTopOf="@+id/teamBasketballIn"/>
-            </androidx.constraintlayout.widget.ConstraintLayout>
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_toEndOf="@+id/containerBtnBasketballIn">
-
-                <View
-                    android:onClick="toFutbollViewTeams"
-                    android:id="@+id/teamPingIn2"
-                    style="@style/buttonTeams"
-                    android:layout_width="100dp"
-                    android:layout_height="50dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:id="@+id/btnTeamPingIn2"
-                    style="@style/TextColor"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Futbol"
-                    app:layout_constraintBottom_toBottomOf="@+id/teamPingIn2"
-                    app:layout_constraintEnd_toEndOf="@+id/teamPingIn2"
-                    app:layout_constraintStart_toStartOf="@+id/teamPingIn2"
-                    app:layout_constraintTop_toTopOf="@+id/teamPingIn2"/>
+                    app:layout_constraintTop_toTopOf="parent"/>
             </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <!--            <androidx.constraintlayout.widget.ConstraintLayout-->
+            <!--                android:id="@+id/containerBtnBasketballIn"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_toEndOf="@+id/containerBtnPingIn">-->
+
+            <!--                <View-->
+            <!--                    android:onClick="toBasketBallViewTeams"-->
+            <!--                    android:id="@+id/teamBasketballIn"-->
+            <!--                    style="@style/buttonTeams"-->
+            <!--                    android:layout_width="100dp"-->
+            <!--                    android:layout_height="50dp"-->
+            <!--                    app:layout_constraintBottom_toBottomOf="parent"-->
+            <!--                    app:layout_constraintStart_toStartOf="parent"-->
+            <!--                    app:layout_constraintTop_toTopOf="parent" />-->
+
+            <!--                <TextView-->
+            <!--                    android:id="@+id/btnTeamBasketballIn"-->
+            <!--                    style="@style/TextColor"-->
+            <!--                    android:layout_width="wrap_content"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:text="BasketBall"-->
+            <!--                    app:layout_constraintBottom_toBottomOf="@+id/teamBasketballIn"-->
+            <!--                    app:layout_constraintEnd_toEndOf="@+id/teamBasketballIn"-->
+            <!--                    app:layout_constraintStart_toStartOf="@+id/teamBasketballIn"-->
+            <!--                    app:layout_constraintTop_toTopOf="@+id/teamBasketballIn"/>-->
+            <!--            </androidx.constraintlayout.widget.ConstraintLayout>-->
+            <!--            <androidx.constraintlayout.widget.ConstraintLayout-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_toEndOf="@+id/containerBtnBasketballIn">-->
+
+            <!--                <View-->
+            <!--                    android:onClick="toFutbollViewTeams"-->
+            <!--                    android:id="@+id/teamPingIn2"-->
+            <!--                    style="@style/buttonTeams"-->
+            <!--                    android:layout_width="100dp"-->
+            <!--                    android:layout_height="50dp"-->
+            <!--                    app:layout_constraintBottom_toBottomOf="parent"-->
+            <!--                    app:layout_constraintStart_toStartOf="parent"-->
+            <!--                    app:layout_constraintTop_toTopOf="parent" />-->
+
+            <!--                <TextView-->
+            <!--                    android:id="@+id/btnTeamPingIn2"-->
+            <!--                    style="@style/TextColor"-->
+            <!--                    android:layout_width="wrap_content"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:text="Futbol"-->
+            <!--                    app:layout_constraintBottom_toBottomOf="@+id/teamPingIn2"-->
+            <!--                    app:layout_constraintEnd_toEndOf="@+id/teamPingIn2"-->
+            <!--                    app:layout_constraintStart_toStartOf="@+id/teamPingIn2"-->
+            <!--                    app:layout_constraintTop_toTopOf="@+id/teamPingIn2"/>-->
+            <!--            </androidx.constraintlayout.widget.ConstraintLayout>-->
 
         </RelativeLayout>
 
-        <ListView
-            android:id="@+id/listItemTeam"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginRight="20dp"
-            android:layout_marginBottom="10dp"
-            android:dividerHeight="15dp">
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp">
 
-        </ListView>
+            <ListView
+                android:id="@+id/listItemTeam"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:dividerHeight="15dp">
+            </ListView>
+        </RelativeLayout>
 
     </LinearLayout>
 
