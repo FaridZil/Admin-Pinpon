@@ -36,7 +36,7 @@ public class Confrontation {
                             String _textNameTeam2, String _txtTeamName1, String _txtTeamName2,
                             String _textViewTime, String _textViewPosition, String _textViewScoreTm1,
                             String _textViewScoreTm2){
-        for(int x = 0; x < idKey.size()-1; x++){
+        for(int x = 0; x < idKey.size(); x++){
             if(key.equals(idKey.get(x))){
                 imgViewTeam1.set(x,_imgViewTeam1);
                 imgViewTeam2.set(x,_imgViewTeam2);
@@ -48,6 +48,26 @@ public class Confrontation {
                 textViewPosition.set(x,_textViewPosition);
                 textViewScoreTm1.set(x,_textViewScoreTm1);
                 textViewScoreTm2.set(x,_textViewScoreTm2);
+                break;
+            }
+        }
+    }
+
+    public void removeItem(String key){
+        for(int x = 0; x < idKey.size() ; x++) {
+            if(key.equals(idKey.get(x))){
+                idKey.remove(x);
+                imgViewTeam1.remove(x);
+                imgViewTeam2.remove(x);
+                textNameTeam1.remove(x);
+                textNameTeam2.remove(x);
+                txtTeamName1.remove(x);
+                txtTeamName2.remove(x);
+                textViewTime.remove(x);
+                textViewPosition.remove(x);
+                textViewScoreTm1.remove(x);
+                textViewScoreTm2.remove(x);
+                break;
             }
         }
     }

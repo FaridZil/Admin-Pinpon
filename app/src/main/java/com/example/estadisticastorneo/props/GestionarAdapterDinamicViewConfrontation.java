@@ -2,6 +2,7 @@ package com.example.estadisticastorneo.props;
 
 import android.content.Context;
 import android.graphics.Color;
+import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,7 +12,11 @@ import android.widget.TextView;
 
 import com.example.estadisticastorneo.R;
 
+import java.text.SimpleDateFormat;
+import java.time.Duration;
 import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
+import java.util.Date;
 import java.util.List;
 
 public class GestionarAdapterDinamicViewConfrontation extends BaseAdapter {
@@ -91,11 +96,13 @@ public class GestionarAdapterDinamicViewConfrontation extends BaseAdapter {
         if(Integer.parseInt(textViewScoreTm1.get(posicion))>Integer.parseInt(textViewScoreTm2.get(posicion))){
             holder.textViewScoreTm1.setTextColor(Color.parseColor("#0EF312"));
             holder.textViewScoreTm2.setTextColor(Color.parseColor("#FFFFFF"));
+        }else if(Integer.parseInt(textViewScoreTm1.get(posicion))==Integer.parseInt(textViewScoreTm2.get(posicion))){
+            holder.textViewScoreTm1.setTextColor(Color.parseColor("#FFC107"));
+            holder.textViewScoreTm2.setTextColor(Color.parseColor("#FFC107"));
         }else{
             holder.textViewScoreTm1.setTextColor(Color.parseColor("#FFFFFF"));
             holder.textViewScoreTm2.setTextColor(Color.parseColor("#0EF312"));
         }
-
         holder.imageTeam1.setImageResource(teamIcons[0]);
         holder.imageTeam2.setImageResource(teamIcons[1]);
         holder.textNameTeam1.setText(textNameTeam1.get(posicion));
@@ -103,6 +110,32 @@ public class GestionarAdapterDinamicViewConfrontation extends BaseAdapter {
         holder.txtTeamName1.setText(txtTeamName1.get(posicion));
         holder.txtTeamName2.setText(txtTeamName2.get(posicion));
         holder.textViewTime.setText(textViewTime.get(posicion));
+
+        // Obtener la hora almacenada en el holder y convertirla a LocalTime
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
+            LocalTime storedTime = LocalTime.parse(holder.textViewTime.getText().toString(), DateTimeFormatter.ofPattern("HH:mm:ss"));
+            Handler handler = new Handler();
+            handler.post(new Runnable() {
+                @Override
+                public void run() {
+                    // Obtener la hora actual
+                    LocalTime currentTime = LocalTime.now();
+                    // Calcular la duración entre la hora almacenada y la hora actual
+                    Duration duration = Duration.between(storedTime, currentTime);
+                    // Obtener los valores de horas, minutos y segundos de la duración
+                    long hours = duration.toHours();
+                    long minutes = duration.toMinutes() % 60;
+                    long seconds = duration.getSeconds() % 60;
+                    holder.textViewTime.setText(String.format("%02d:%02d:%02d", hours, minutes, seconds));
+                    handler.postDelayed(this,1000);
+                }
+            });
+            // Actualizar el texto del TextView con el tiempo transcurrido
+
+        } else {
+            holder.textViewTime.setVisibility(View.INVISIBLE);
+        }
+
         holder.textViewPosition.setText(textViewPosition.get(posicion));
         holder.textViewScoreTm1.setText(textViewScoreTm1.get(posicion));
         holder.textViewScoreTm2.setText(textViewScoreTm2.get(posicion));

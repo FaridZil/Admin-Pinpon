@@ -55,7 +55,6 @@ public class HomeViewModel extends ViewModel {
                 String textViewTime = snapshot.child("textViewTime").getValue(String.class);
                 String txtTeamName1 = snapshot.child("txtTeamName1").getValue(String.class);
                 String txtTeamName2 = snapshot.child("txtTeamName2").getValue(String.class);
-
                 mConfrontation.addItem(idKey,imgViewTeam1,imgViewTeam2,textNameTeam1,textNameTeam2,txtTeamName1,txtTeamName2,textViewTime,textViewPosition,String.valueOf(textViewScoreTm1),String.valueOf(textViewScoreTm2));
                 confrontationMutableLiveData.setValue(mConfrontation);
             }
@@ -79,7 +78,8 @@ public class HomeViewModel extends ViewModel {
 
             @Override
             public void onChildRemoved(@NonNull DataSnapshot snapshot) {
-
+                mConfrontation.removeItem(snapshot.getKey());
+                confrontationMutableLiveData.setValue(mConfrontation);
             }
 
             @Override
@@ -91,7 +91,6 @@ public class HomeViewModel extends ViewModel {
             public void onCancelled(@NonNull DatabaseError error) {
             }
         });
-
     }
 
     public LiveData<Confrontation> getListConfrontation() { return confrontationMutableLiveData;}
