@@ -13,6 +13,7 @@ public class User {
         this.email = email;
         this.password = password;
         this.active = active;
+        int x = 0;
     }
 
     public User() {
