@@ -65,6 +65,7 @@
                 android:layout_marginEnd="0dp">
 
                 <Button
+                    style="@style/ColorButton"
                     android:text="Ping Pong"
                     android:textColor="@color/white"
                     android:textColorHint="@color/black"

@@ -18,6 +18,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintWidth_percent="0.5"
         app:lottie_autoPlay="true"
-        app:lottie_loop="false"
+        app:lottie_loop="true"
         app:lottie_rawRes="@raw/animated_sports_field" />
 </androidx.constraintlayout.widget.ConstraintLayout>

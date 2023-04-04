@@ -23,6 +23,11 @@ public class Confrontation {
         idKey = new ArrayList<>();
         imgViewTeam1 = new ArrayList<>();
         imgViewTeam2 = new ArrayList<>();
+        textNameTeam1 = new ArrayList<>();
+        textNameTeam2 = new ArrayList<>();
+        txtTeamName1 = new ArrayList<>();
+        txtTeamName2 = new ArrayList<>();
+        textViewTime = new ArrayList<>();
         textViewPosition = new ArrayList<>();
         textViewScoreTm1 = new ArrayList<>();
         textViewScoreTm2 = new ArrayList<>();

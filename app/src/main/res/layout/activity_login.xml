@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF"
+    style="@style/BackgroundFont"
     app:layout_constraintBottom_toBottomOf="parent"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toTopOf="parent">
@@ -12,7 +12,6 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#FFFFFF"
         tools:context=".logger.Login">
 
         <TextView
@@ -28,7 +27,7 @@
             android:gravity="center_horizontal|center_vertical"
             android:lineSpacingExtra="8sp"
             android:text="¿No tienes una cuenta?"
-            android:textColor="#000000"
+            android:textColor="#FFFFFF"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="@+id/textView5" />
 
@@ -45,7 +44,7 @@
             android:lineSpacingExtra="8sp"
             android:onClick="registrarse"
             android:text="Registrate"
-            android:textColor="#427261"
+            android:textColor="#000000"
             app:layout_constraintBottom_toBottomOf="@+id/no_tengo_un"
             app:layout_constraintStart_toEndOf="@+id/no_tengo_un"
             app:layout_constraintTop_toTopOf="@+id/no_tengo_un"
@@ -74,6 +73,7 @@
 
         <EditText
             android:id="@+id/ediTxtCorreo"
+            style="@style/BackgroundFont"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:layout_marginStart="32dp"
@@ -84,8 +84,8 @@
             android:inputType="textEmailAddress"
             android:paddingLeft="45dp"
             android:paddingRight="8dp"
-            android:textColor="@color/black"
-            android:textColorHint="#383938"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#FFFFFF"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.532"
             app:layout_constraintStart_toStartOf="parent"
@@ -104,31 +104,31 @@
             app:layout_constraintStart_toStartOf="@+id/ediTxtCorreo"
             app:layout_constraintTop_toTopOf="@+id/ediTxtCorreo" />
 
-        <View
+        <com.google.android.material.divider.MaterialDivider
             android:id="@+id/view4"
+            android:layout_height="wrap_content"
             android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_marginStart="32dp"
-            android:layout_marginEnd="32dp"
-            android:layout_marginBottom="4dp"
-            android:background="@drawable/ic_linea_gris_de_datos"
-            app:layout_constraintBottom_toBottomOf="@+id/ediTxtCorreo"
+            android:layout_marginStart="70dp"
+            android:layout_marginEnd="33dp"
+            style="@style/DividerGoogle"
+            app:layout_constraintTop_toBottomOf="@+id/ediTxtCorreo"
             app:layout_constraintEnd_toEndOf="@+id/ediTxtCorreo"
             app:layout_constraintStart_toStartOf="@+id/ediTxtCorreo" />
 
-        <View
+
+        <com.google.android.material.divider.MaterialDivider
             android:id="@+id/line4"
+            android:layout_height="wrap_content"
             android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_marginStart="32dp"
-            android:layout_marginEnd="32dp"
-            android:layout_marginBottom="4dp"
-            android:background="@drawable/ic_linea_gris_de_datos"
-            app:layout_constraintBottom_toBottomOf="@+id/ediTxtPass"
+            android:layout_marginStart="70dp"
+            android:layout_marginEnd="33dp"
+            style="@style/DividerGoogle"
+            app:layout_constraintTop_toBottomOf="@+id/ediTxtPass"
             app:layout_constraintEnd_toEndOf="@+id/ediTxtPass"
             app:layout_constraintStart_toStartOf="@+id/ediTxtPass" />
 
         <EditText
+            style="@style/BackgroundFont"
             android:id="@+id/ediTxtPass"
             android:layout_width="match_parent"
             android:layout_height="40dp"
@@ -140,8 +140,8 @@
             android:inputType="textPassword"
             android:paddingLeft="45dp"
             android:paddingRight="45dp"
-            android:textColor="@color/black"
-            android:textColorHint="#383938"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#FFFFFF"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
@@ -188,7 +188,7 @@
             android:lineSpacingExtra="4sp"
             android:onClick="toRecoveryPass"
             android:text="¿Olvidaste tú contraseña?"
-            android:textColor="@color/black"
+            android:textColor="#FFFFFF"
             android:textSize="12sp"
             app:layout_constraintEnd_toEndOf="@+id/ediTxtPass"
             app:layout_constraintTop_toBottomOf="@+id/ediTxtPass" />
@@ -205,7 +205,7 @@
             android:gravity="center_horizontal|center_vertical"
             android:lineSpacingExtra="4sp"
             android:text="O conectarse con Google:"
-            android:textColor="@color/black"
+            android:textColor="#FFFFFF"
             android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -229,7 +229,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Iniciar Sesión"
-            android:textColor="#000000"
+            android:textColor="#FFFFFF"
             android:textSize="24sp"
             app:layout_constraintBottom_toBottomOf="@+id/log_in"
             app:layout_constraintEnd_toEndOf="@+id/log_in"
