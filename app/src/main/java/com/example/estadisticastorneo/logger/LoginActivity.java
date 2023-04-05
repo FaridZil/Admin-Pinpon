@@ -7,6 +7,7 @@ import android.text.method.PasswordTransformationMethod;
 import android.util.Log;
 import android.util.Patterns;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -44,7 +45,7 @@ public class LoginActivity extends AppCompatActivity {
     private TextView registrarse;
     private EditText _user;
     private EditText _password;
-    private View _buttonLogin;
+    private Button _buttonLogin;
 
     //Necesario para inciar
     //Iniciar sesión con Google
@@ -58,15 +59,12 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        registrarse = findViewById(R.id.no_tengo_un2);
         _user = findViewById(R.id.ediTxtCorreo);
         _password =findViewById(R.id.ediTxtPass);
         _buttonLogin = findViewById(R.id.log_in);
         _firebaseauth = FirebaseAuth.getInstance();
         _databasereference = FirebaseDatabase.getInstance().getReference();
         btn_iniciar1 = findViewById(R.id.signGoogle);
-
-
     }
     public void toMain(View view){
         //Al ser el primer ingreso cargamos los datos que tengamos en las cajas de texto
