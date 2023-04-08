@@ -50,6 +50,7 @@ public class LoginActivity extends AppCompatActivity {
     //Necesario para inciar
     //Iniciar sesión con Google
     private ImageView btn_iniciar1;
+    private ImageView imgBack;
     private SignInButton btn_iniciar;
     private GoogleSignInClient mGoogleSignInClient;
     GoogleSignInOptions gso;
@@ -62,9 +63,18 @@ public class LoginActivity extends AppCompatActivity {
         _user = findViewById(R.id.ediTxtCorreo);
         _password =findViewById(R.id.ediTxtPass);
         _buttonLogin = findViewById(R.id.log_in);
+        imgBack = findViewById(R.id.imageViewClickBackLogin);
         _firebaseauth = FirebaseAuth.getInstance();
         _databasereference = FirebaseDatabase.getInstance().getReference();
         btn_iniciar1 = findViewById(R.id.signGoogle);
+        imgBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
     }
     public void toMain(View view){
         //Al ser el primer ingreso cargamos los datos que tengamos en las cajas de texto

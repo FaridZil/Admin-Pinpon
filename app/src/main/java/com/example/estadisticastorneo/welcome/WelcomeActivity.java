@@ -9,6 +9,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 
+import com.example.estadisticastorneo.logger.HomeActivity;
 import com.example.estadisticastorneo.view.MainActivity;
 import com.example.estadisticastorneo.R;
 import com.example.estadisticastorneo.logger.DataCompleteActivity;
@@ -51,7 +52,7 @@ public class WelcomeActivity extends AppCompatActivity {
                     if (user!= null){
                         consultaDatosUser(user);
                     }else {
-                        Intent intent = new Intent(WelcomeActivity.this, LoginActivity.class);
+                        Intent intent = new Intent(WelcomeActivity.this, HomeActivity.class);
                         startActivity(intent);
                         finish();
                     }

@@ -30,7 +30,7 @@
         <activity
             android:name=".welcome.WelcomeActivity"
             android:exported="true"
-            android:theme="@style/Theme.EstadisticasTorneo.NoActionBar">
+            android:theme="@style/Theme.AppCompat.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -39,32 +39,33 @@
         </activity>
         <activity
             android:name=".logger.ForgetPasswordActivity"
-            android:theme="@style/Theme.EstadisticasTorneo.NoActionBar"
+            android:theme="@style/Theme.AppCompat.NoActionBar"
             android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
         </activity>
         <activity
             android:name=".logger.EmailVerficationActivity"
-            android:theme="@style/Theme.EstadisticasTorneo.NoActionBar"
+            android:theme="@style/Theme.AppCompat.NoActionBar"
             android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
+        </activity>
+        <activity
+            android:name=".logger.PasswordRestarActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar"
+            android:exported="false">
+        </activity>
+        <activity
+            android:name=".logger.HomeActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.NoActionBar">
         </activity>
         <activity
             android:name=".logger.DataCompleteActivity"
-            android:theme="@style/Theme.Design.Light.NoActionBar"
+            android:theme="@style/Theme.AppCompat.NoActionBar"
             android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
         </activity>
         <activity
             android:name=".logger.SigninActivity"
             android:exported="false"
-            android:theme="@style/Theme.EstadisticasTorneo.NoActionBar" />
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
 
         <activity
             android:name=".logger.LoginActivity"

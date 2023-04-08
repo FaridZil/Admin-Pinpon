@@ -4,16 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#000000"
+    android:background="@drawable/background_fondo"
     app:layout_constraintBottom_toBottomOf="parent"
     app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toTopOf="parent">
+    app:layout_constraintTop_toTopOf="parent"
+    tools:context=".logger.SigninActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#FFFFFF"
-        tools:context=".logger.SigninActivity">
+        android:layout_height="match_parent">
 
 
         <ImageView
@@ -195,7 +194,7 @@
             android:layout_centerVertical="true"
             android:alpha=".9"
             android:padding="5dp"
-            android:src="@drawable/ic_candado"
+            android:src="@drawable/ic_candado_grey"
             app:layout_constraintBottom_toBottomOf="@+id/ediTxtPassRes"
             app:layout_constraintStart_toStartOf="@+id/ediTxtPassRes"
             app:layout_constraintTop_toTopOf="@+id/ediTxtPassRes" />
@@ -254,7 +253,7 @@
             android:layout_centerVertical="true"
             android:alpha=".9"
             android:padding="5dp"
-            android:src="@drawable/ic_candado"
+            android:src="@drawable/ic_candado_grey"
             app:layout_constraintBottom_toBottomOf="@+id/ediTxtPassResConf"
             app:layout_constraintStart_toStartOf="@+id/ediTxtPassResConf"
             app:layout_constraintTop_toTopOf="@+id/ediTxtPassResConf" />
@@ -293,7 +292,7 @@
             android:layout_marginStart="32dp"
             android:layout_marginTop="92dp"
             android:layout_marginEnd="32dp"
-            android:background="@drawable/btndesha"
+            android:background="@drawable/button_colors_green"
             android:onClick="agregaUsuario"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
@@ -305,7 +304,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Registrarme"
-            android:textColor="#000000"
+            android:textColor="@color/white"
             android:textSize="24sp"
             app:layout_constraintBottom_toBottomOf="@+id/btn_registrarse"
             app:layout_constraintEnd_toEndOf="@+id/btn_registrarse"
